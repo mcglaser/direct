@@ -15,53 +15,7 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                Apt/Suite #
-            </label>
-            <div class="col-sm-6 col-md-4">
-                <input class="form-control" type="text" id="Street2" name="Street2" value="" autocomplete="address-line2">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                Postal/Zip Code
-            </label>
-            <div class="col-sm-2 col-md-2">
-                <input class="form-control places-autocomplete" type="text" id="PostalCode" name="PostalCode" placeholder="" value="" autocomplete="postal-code">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                City
-            </label>
-            <div class="col-sm-4 col-md-3">
-                <input class="form-control" type="text" id="City" name="City" value="" autocomplete="address-level2">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                Country
-            </label>
-            <div class="col-sm-4 col-md-3">
-                <input class="form-control" type="text" id="Country" name="Country" value="" autocomplete="country">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                State/Territory
-            </label>
-            <div class="col-sm-4 col-md-3">
-                <input class="form-control" type="text" id="State" name="State" value="" autocomplete="address-level1">
-            </div>
-        </div>
-    </fieldset>
-</form>
-
+        
 <script>
     var GoogleMapsDemo = GoogleMapsDemo || {};
 
@@ -168,68 +122,7 @@ GoogleMapsDemo.Application = (function () {
         });
     }
     
-    var _updateAddress = function (args) {
-        var $fieldset;
-        var isPostalCode = false;
-        if (args.input) {
-            $fieldset = $(args.input).closest('fieldset');
-            isPostalCode = $(args.input).is('[id$=PostalCode]');
-            console.log(isPostalCode);
-        } else {
-            $fieldset = $(args.fieldset);
-        }
-        
-        var $street = $fieldset.find('[id$=Street]');
-        var $street2 = $fieldset.find('[id$=Street2]');
-        var $postalCode = $fieldset.find('[id$=PostalCode]');
-        var $city = $fieldset.find('[id$=City]');
-        var $country = $fieldset.find('[id$=Country]');
-        var $state = $fieldset.find('[id$=State]');
-        
-        if (!isPostalCode) {
-            $street.val('');
-            $street2.val('');
-        }
-        $postalCode.val('');
-        $city.val('');
-        $country.val('');
-        $state.val('');
-        
-        var streetNumber = '';
-        var route = '';
-        
-        for (var i = 0; i < args.address_components.length; i++) {
-            var component = args.address_components[i];
-            var addressType = component.types[0];
 
-            switch (addressType) {
-                case 'street_number':
-                    streetNumber = component.long_name;
-                    break;
-                case 'route':
-                    route = component.short_name;
-                    break;
-                case 'locality':
-                    $city.val(component.long_name);
-                    break;
-                case 'administrative_area_level_1':
-                    $state.val(component.long_name);
-                    break;
-                case 'postal_code':
-                    $postalCode.val(component.long_name);
-                    break;
-                case 'country':
-                    $country.val(component.long_name);
-                    break;
-            }
-        }
-        
-        if (route) {
-            $street.val(streetNumber && route
-                        ? streetNumber + ' ' + route
-                        : route);
-        }
-    }
     
     return {
         Init: _init
