@@ -56,6 +56,10 @@ Rails.application.routes.draw do
   
   root 'static_pages#home'
   
-    
+  get 'addy' => 'static_pages#parse_address'
+  
+  get 'fake' => 'static_pages#fake'
+  
+  #post 'addy' => 'static_pages#parse_address'
   
 end

@@ -1,20 +1,28 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["MAPS_API_KEY"] %>&libraries=places"></script>
 
-<div class="container-fluid">
+
 <center>
 <h1>Enter Your Address:</h1>
 <br><br>
 <form class="form-horizontal" role="form">
-    <fieldset class="address">
-        <div class="form-group">
-            <label class="control-label col-sm-2 col-md-3">
-                Address
-            </label>
-            <div class="col-sm-6 col-md-4">
-                <input class="form-control places-autocomplete" type="text" id="Street" name="Street" placeholder="" value="" autocomplete="address-line1">
-            </div>
-        </div>
 
+
+ <br><br>
+    
+
+
+ <%= form_for :addy, url: "static_pages_controller/parse_address" do |form| %>
+  <input class="form-control places-autocomplete" type="text" id="Street" name="Street" placeholder="" value="" autocomplete="address-line1"<%= form.text_field :address %>
+  <%= form.submit 'Submit'  %>
+<% end  %>      
+        
+ 
+<%= form_tag("/addy", method: "get") do %>
+  <input class="form-control places-autocomplete" type="text" id="Street" name="Street" placeholder="" value="" autocomplete="address-line1">
+  <%= submit_tag("Submit") %>
+<% end %>       
+        
+        
         
 <script>
     var GoogleMapsDemo = GoogleMapsDemo || {};
