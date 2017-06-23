@@ -12,14 +12,12 @@
 
 
  <%= form_for :addy, url: "static_pages_controller/parse_address" do |form| %>
-  <input class="form-control places-autocomplete" type="text" id="Street" name="Street" placeholder="" value="" autocomplete="address-line1"<%= form.text_field :address %>
-  <%= form.submit 'Submit'  %>
 <% end  %>      
         
  
 <%= form_tag("/addy", method: "get") do %>
   <input class="form-control places-autocomplete" type="text" id="Street" name="Street" placeholder="" value="" autocomplete="address-line1">
-  <%= submit_tag("Submit") %>
+  <%= submit_tag("SEcond") %>
 <% end %>       
         
         
