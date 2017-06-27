@@ -129,12 +129,12 @@ class DistrictsController < ApplicationController
   
 
 
- # private
+    private
   
 
-#    def user_params
-#      params.require(:user).permit(:email, :password, :first_name)
-#    end
+    def district_params
+      params.require(:district).permit(:senator_one_name, :senator_one_party, :senator_one_photo_url, :senator_one_website, :senator_one_facebook, :senator_one_twitter, :senator_two_name, :senator_two_party, :senator_two_photo_url, :senator_two_website, :senator_two_facebook, :senator_two_twitter, :us_rep_name, :us_rep_party, :us_rep_photo_url, :us_rep_website, :us_rep_facebook, :us_rep_twitter)
+    end
 
 
  
