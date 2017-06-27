@@ -54,12 +54,13 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-  root 'static_pages#home'
+  root 'districts#home'
   
-  get 'addy' => 'static_pages#parse_address'
+  get 'addy' => 'districts#parse_address'
   
   get 'fake' => 'static_pages#fake'
   
   #post 'addy' => 'static_pages#parse_address'
   
+  resources :districts
 end
