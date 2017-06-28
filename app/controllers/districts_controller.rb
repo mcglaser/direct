@@ -40,15 +40,21 @@ class DistrictsController < ApplicationController
  #   @senator_one_website = @senator_one_websites_array[0]
 
     #US Senator One Social Media
-    @senator_one_socials_array = @senator_one_hash.fetch("channels")
-    @senator_one_socials_array.each do |hash|
-      if hash.has_value?("Facebook") 
-        @senator_one_facebook = hash.fetch("id")
-      elsif hash.has_value?("Twitter")
-        @senator_one_twitter = hash.fetch("id")
+    @senator_one_socials_array = @senator_one_hash.fetch('channels', nil)
+    
+    
+    if @senator_one_socials_array == nil
+        @senator_one_facebook = nil
+        @senator_one_twitter = nil
+    else
+     @senator_one_socials_array.each do |hash|
+        if hash.has_value?("Facebook") 
+          @senator_one_facebook = hash.fetch("id")
+        elsif hash.has_value?("Twitter")
+          @senator_one_twitter = hash.fetch("id")
+        end
       end
-        
-     end
+    end
 
 
 # US Senator Two
@@ -60,15 +66,21 @@ class DistrictsController < ApplicationController
 #    @senator_two_website = @senator_two_websites_array[0]
 
     #US Senator Two Social Media
-    @senator_two_socials_array = @senator_two_hash.fetch("channels")
-    @senator_two_socials_array.each do |hash|
-      if hash.has_value?("Facebook") 
-        @senator_two_facebook = hash.fetch("id")
-      elsif hash.has_value?("Twitter")
-        @senator_two_twitter = hash.fetch("id")
+    @senator_two_socials_array = @senator_two_hash.fetch('channels', nil)
+    
+    
+    if @senator_two_socials_array == nil
+        @senator_two_facebook = nil
+        @senator_two_twitter = nil
+    else
+     @senator_two_socials_array.each do |hash|
+        if hash.has_value?("Facebook") 
+          @senator_two_facebook = hash.fetch("id")
+        elsif hash.has_value?("Twitter")
+          @senator_two_twitter = hash.fetch("id")
+        end
       end
-        
-     end
+    end
 
 # US Rep 
     @us_rep_hash = @office_holders_hash[4]
@@ -79,37 +91,43 @@ class DistrictsController < ApplicationController
 #    @us_rep_website = @us_rep_websites_array[0]
 
     #US Rep Social Media
-    @us_rep_socials_array = @us_rep_hash.fetch("channels")
-    @us_rep_socials_array.each do |hash|
-      if hash.has_value?("Facebook") 
-        @us_rep_facebook = hash.fetch("id")
-      elsif hash.has_value?("Twitter")
-        @us_rep_twitter = hash.fetch("id")
+    @us_rep_socials_array = @us_rep_hash.fetch('channels', nil)
+    
+    
+    if @us_rep_socials_array == nil
+        @us_rep_facebook = nil
+        @us_rep_twitter = nil
+    else
+     @us_rep_socials_array.each do |hash|
+        if hash.has_value?("Facebook") 
+          @us_rep_facebook = hash.fetch("id")
+        elsif hash.has_value?("Twitter")
+          @us_rep_twitter = hash.fetch("id")
+        end
       end
-        
-     end
+    end
   
       @district = District.new
  
       @district.district_name = @district_hash.fetch("name").titleize
       
-      @district.senator_one_name = @senator_one_hash.fetch("name")
-      @district.senator_one_party = @senator_one_hash.fetch("party")
-      @district.senator_one_photo_url = @senator_one_hash.fetch("photoUrl")
+      @district.senator_one_name = @senator_one_hash.fetch('name', nil)
+      @district.senator_one_party = @senator_one_hash.fetch('party', nil)
+      @district.senator_one_photo_url = @senator_one_hash.fetch('photoUrl', nil)
       @district.senator_one_website = @senator_one_websites_array[0]
       @district.senator_one_facebook = @senator_one_facebook
       @district.senator_one_twitter = @senator_one_twitter
 
-      @district.senator_two_name = @senator_two_hash.fetch("name")
-      @district.senator_two_party = @senator_two_hash.fetch("party")
-      @district.senator_two_photo_url = @senator_two_hash.fetch("photoUrl")
+      @district.senator_two_name = @senator_two_hash.fetch('name', nil)
+      @district.senator_two_party = @senator_two_hash.fetch('party', nil)
+      @district.senator_two_photo_url = @senator_two_hash.fetch('photoUrl', nil)
       @district.senator_two_website = @senator_two_websites_array[0]
       @district.senator_two_facebook = @senator_two_facebook
       @district.senator_two_twitter = @senator_two_twitter
 
-      @district.us_rep_name = @us_rep_hash.fetch("name")
-      @district.us_rep_party = @us_rep_hash.fetch("party")
-      @district.us_rep_photo_url = @us_rep_hash.fetch("photoUrl")
+      @district.us_rep_name = @us_rep_hash.fetch('name', nil)
+      @district.us_rep_party = @us_rep_hash.fetch('party', nil)
+      @district.us_rep_photo_url = @us_rep_hash.fetch('photoUrl', nil)
       @district.us_rep_website = @us_rep_websites_array[0]
       @district.us_rep_facebook = @us_rep_facebook
       @district.us_rep_twitter = @us_rep_twitter
