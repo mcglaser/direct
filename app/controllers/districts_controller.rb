@@ -107,7 +107,7 @@ class DistrictsController < ApplicationController
       end
     end
   
-      @district = District.new
+      @district = District.where(:district_name => @district_hash.fetch("name").titleize).first_or_create
  
       @district.district_name = @district_hash.fetch("name").titleize
       
