@@ -80,8 +80,10 @@ time, mark, audio, video {
 
 
 .bg-image {
-	height: 700px;
-	width: 100%; }
+	height: 500px;
+	width: 100%; 
+	
+}
 
 .bg-image-capitol {
 	background-image: url(http://www.iamthemodernman.biz/directdem/alt/directdemcapitolbuilding5.jpg);
@@ -121,11 +123,28 @@ time, mark, audio, video {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: absolute;
     text-align: center;
-    top: 260px;
+    top: 135px;
     margin-right: 0%;
     margin-left: 0%;
     width: 100%;
 }
+
+.bg-image button {
+
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    text-align: center;
+    top: 470px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    
+}
+
+
 
 
 
