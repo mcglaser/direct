@@ -88,6 +88,7 @@ time, mark, audio, video {
 .bg-image {
 	height: 500px;
 	width: 100%; 
+
 	
 }
 
@@ -126,28 +127,26 @@ time, mark, audio, video {
 
     font-size: 57px;
     color: #E6E6E6;
-    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: absolute;
     text-align: center;
-    top: 135px;
+    top: 20%;
     margin-right: 0%;
     margin-left: 0%;
     width: 100%;
 }
 
 .bg-image button {
-
-
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: absolute;
     text-align: center;
-    top: 470px;
+    top: 60%;
     right: 0;
     left: 0;
     margin-right: auto;
     margin-left: auto;
-    width: 150px;
+    width: 200px;
     height: 40px;
     color: #ffffff;
     font-weight: bold;
@@ -155,8 +154,18 @@ time, mark, audio, video {
     border-bottom-color: #009CDE;
     background-color: #009CDE;
     transition: 0.25s;
-  
-  
-    
 }
 
+
+.video {
+    height: 400px;
+    text-align: center;
+	
+}
+
+.question {
+    font-size: 25px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
