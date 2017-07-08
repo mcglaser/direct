@@ -141,20 +141,15 @@ time, mark, audio, video {
     margin-right: auto;
     margin-left: auto;
     width: 200px;
+    height: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    border-color: #009CDE;
+    border-bottom-color: #009CDE;
+    background-color: #009CDE;
+    transition: 0.25s;
+  
+  
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
