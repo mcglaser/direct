@@ -126,12 +126,12 @@ time, mark, audio, video {
 .bg-image h1 {
 
     font-size: 57px;
-    color: #E6E6E6;
+    color: #F8F8FF;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: absolute;
     text-align: center;
-    top: 20%;
+    top: 135px;
     margin-right: 0%;
     margin-left: 0%;
     width: 100%;
@@ -141,7 +141,7 @@ time, mark, audio, video {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: absolute;
     text-align: center;
-    top: 60%;
+    top: 390px;
     right: 0;
     left: 0;
     margin-right: auto;
@@ -158,7 +158,7 @@ time, mark, audio, video {
 
 
 .video {
-    height: 400px;
+    height: 475px;
     text-align: center;
 	
 }
@@ -166,6 +166,24 @@ time, mark, audio, video {
 .question {
     font-size: 25px;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.address {
+    height: 500px;
+    text-align: center;
+    background-color: #009CDE;
+	
+}
+
+.start {
+    color: #ffffff;
+    font-size: 25px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    padding-top: 20px;
     margin-bottom: 20px;
 }
