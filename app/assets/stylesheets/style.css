@@ -294,3 +294,18 @@ time, mark, audio, video {
     background-color: #009CDE;
 
 }
+
+
+.footer {
+    background-color: #232528;
+    color: #EAF6FF;
+    height: 40px;
+    font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
+    
+    
+}
+
