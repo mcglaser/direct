@@ -139,6 +139,7 @@ time, mark, audio, video {
 
 .bg-image button {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;    
     position: absolute;
     text-align: center;
     top: 390px;
@@ -173,7 +174,7 @@ time, mark, audio, video {
 
 
 .address {
-    height: 500px;
+    height: 1200px;
     text-align: center;
     background-color: #009CDE;
 	
@@ -186,4 +187,28 @@ time, mark, audio, video {
     font-weight: bold;
     padding-top: 20px;
     margin-bottom: 20px;
+    
+
+}
+
+.start h1 {
+    font-size: 35px;
+
+    
+}
+
+.start h2 {
+    padding-bottom: 20px;
+
+    
+}
+
+
+
+.icon {
+     vertical-align: middle;
+}
+
+#yellow {
+    color: #FAFF00;
 }
