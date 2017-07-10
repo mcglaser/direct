@@ -174,7 +174,7 @@ time, mark, audio, video {
 
 
 .address {
-    height: 1200px;
+    height: 900px;
     text-align: center;
     background-color: #009CDE;
 	
@@ -238,4 +238,58 @@ time, mark, audio, video {
     height: 300px;
     margin: auto;
     
+}
+
+.form-control {
+    width:600px;
+    border-radius: 25px;
+    border: 2px #00B6D5;
+    padding: 12px 20px;
+    margin: 37px 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: black;
+    font-weight: bold;
+    text-align: center;    
+    
+}
+
+
+.asdfsearchbutton {
+    color:#ffffff;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding:4.5px;
+    background-color: #00a251;
+    border: 3px solid #ffffff;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    cursor:pointer; 
+}
+
+
+.searchbutton {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;    
+    text-align: center;
+    top: 390px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    border-color: #ffffff;
+    border: 4px solid #ffffff;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    background-color: #009CDE;
+
 }
