@@ -3,26 +3,30 @@
 
 <div class="fixed-size-container">
   <div class="fixed-size">
- <h2>Senator <%= @district.senator_one_name %></h2>
+<h2>Senator <%= @district.senator_one_name %></h2>    
+<h2><img src="<%= @district.senator_one_photo_url %>"></h2>    
 <h2><%= @district.senator_one_party %></h2>
-<h2><img src="<%= @district.senator_one_photo_url %>"></h2>
-<h2><a href="<%= @district.senator_one_website %>">Website</a </h2>
+<h2><a href="<%= @district.senator_one_website %>">Website</a> </h2>
 <h2>Facebook: <%= @district.senator_one_facebook %></h2>
 <h2>Twitter: <%= @district.senator_one_twitter %></h2>     
   </div>
-  <div class="fixed-size"><h2>Senator <%= @district.senator_two_name %></h2>
+  
+  
+  <div class="fixed-size">
+<h2>Senator <%= @district.senator_two_name %></h2>    
+<h2><img src="<%= @district.senator_two_photo_url %>"></h2>    
 <h2><%= @district.senator_two_party %></h2>
-<h2><img src="<%= @district.senator_two_photo_url %>"></h2>
-<h2><a href="<%= @district.senator_two_website %>">Website</a </h2>
+<h2><a href="<%= @district.senator_two_website %>">Website</a> </h2>
 <h2>Facebook: <%= @district.senator_two_facebook %></h2>
 <h2>Twitter: <%= @district.senator_two_twitter %></h2>
 </div>
 
 
 
-  <div class="fixed-size"><h2>Rep. <%= @district.us_rep_name %></h2>
-<h2><%= @district.us_rep_party %></h2>
+  <div class="fixed-size">
+<h2>Rep. <%= @district.us_rep_name %></h2>
 <h2><img src="<%= @district.us_rep_photo_url %>"></h2>
+<h2><%= @district.us_rep_party %></h2>
 <h2><a href="<%= @district.us_rep_website %>">Website</a </h2>
 <h2>Facebook: <%= @district.us_rep_facebook %></h2>
 <h2>Twitter: <%= @district.us_rep_twitter %></h2>
